@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './FavoritePage.css';
+import { useNavigate } from 'react-router-dom';
 const FavoritePage = () => {
   const { id } = useParams();
   const [favorites, setFavorites] = useState([]);
   const [listName, setListName] = useState('');
+  const navigate = useNavigate();
+  const handleHomeClick = ()=>{
+    navigate('/');
+    window.location.reload();
+  }
 
   useEffect(() => {
     const savedList = JSON.parse(localStorage.getItem(`favorites_${id}`));
@@ -37,7 +43,7 @@ const FavoritePage = () => {
             </li>
           ))}
         </ul>
-        <button className='favorite'><a href='/'>Əsas səhifəyə keş</a></button>
+        <button className='favorite' onClick={handleHomeClick}>Əsas səhifəyə keş</button>
      
     </div>
   );

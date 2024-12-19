@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, NavLink } from 'react-router-dom';
 import './App.css';
 import MovieSearch from './Components/MovieSearch/MovieSearch';
 import MovieList from './Components/MovieList/MovieList';
@@ -98,7 +98,7 @@ const App = () => {
                   {savedLink && (
                     <div className="save-link">
                       <button className="favorite">
-                        <a href={savedLink}>Favorite liste keçid</a>
+                        <NavLink to={savedLink}>Favorite liste keçid</NavLink>
                       </button>
                     </div>
                   )}
