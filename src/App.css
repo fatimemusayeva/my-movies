@@ -1,0 +1,50 @@
+.container {
+  padding: 20px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.lists-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; 
+}
+
+.movie-list-container,
+.favorite-container {
+  flex: 1; 
+  min-width: 400px; 
+}
+.favorite-container {
+  height: 50%;
+}
+.save-link {
+  text-align: center;
+  margin-top: 20px;
+}
+.favorite{
+  width: 80%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.favorite a{
+  text-decoration: none;
+  color: white;
+}
+.no-results-message {
+  color: red;
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+}
